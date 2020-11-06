@@ -1,0 +1,9 @@
+.tableCon{
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    margin-top: 6rem;
+    margin-left: 4rem;
+    width: 45rem;
+    border: solid black;
+}
