@@ -1,0 +1,9 @@
+.chatCon{
+    height: 20rem;
+    width: 32rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 6rem;
+    margin-left: 10rem;
+}

@@ -1,0 +1,115 @@
+.mainCon{
+    height: 100%;
+    width: 100%;
+    margin-top: 0rem;
+    display: flex;
+    flex-direction:  column;
+}
+.introCon{
+    height: 35rem;
+    width: 100%;
+    color: white;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.topBar{
+    height: 3.5rem;
+    width: 100%;
+    color: white;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+}
+.actionItems{
+    margin-top: 0.5rem;
+    margin-right: 2.0rem;
+    display: flex;
+    flex-direction: row;
+}
+.title{
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+.heroLine{
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+   
+}
+.analysisCon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+}
+.analysisText{
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4rem;
+    padding-top: 0.5rem;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 35rem;
+    
+}
+.mobileSize{
+
+}
+
+@media only screen and (max-width: 600px) {
+    .topBar{
+        height: 3.5rem;
+        width: 100%;
+        color: white;
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: space-between;
+    }
+    .mainCon{
+        height: 100%;
+        width: 100%;
+        margin-top: 0rem;
+        display: flex;
+        flex-direction:  column;
+    }
+    .introCon{
+        height: 55rem;
+        width: 100vh;
+        color: white;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .analysisCon{
+        display: flex;
+        width: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4rem;
+    }
+    .mobileSize{
+       max-width: 400px;
+    }
+}
