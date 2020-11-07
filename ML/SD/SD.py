@@ -6,8 +6,6 @@ from centroidtracker import CentroidTracker
 from itertools import combinations
 import math
 
-
-
 protopath = "ML/SD/MobileNetSSD_deploy.prototxt"
 modelpath = "ML/SD/MobileNetSSD_deploy.caffemodel"
 detector = cv2.dnn.readNetFromCaffe(prototxt=protopath, caffeModel=modelpath)
@@ -143,8 +141,12 @@ def main(path_to_VID,path_to_new_VID):
         for id, box in centroid_dict.items():
             if id in red_zone_list:
                 cv2.rectangle(frame, (box[2], box[3]), (box[4], box[5]), (0, 0, 255), 2)
+                print("distance not maintained")
+                
             else:
                 cv2.rectangle(frame, (box[2], box[3]), (box[4], box[5]), (0, 255, 0), 2)
+                print("distance maintained")
+                
 
 
         fps_end_time = datetime.datetime.now()
