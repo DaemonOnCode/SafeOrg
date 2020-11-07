@@ -10,11 +10,11 @@ function setup() {
 }
 
 
-S = 4
+S = 2
 
 function draw() {
   
-  textSize(10);
+  textSize(15);
   textFont(AntipastoPro)
 
   // Big Box
