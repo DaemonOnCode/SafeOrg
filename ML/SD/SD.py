@@ -58,9 +58,9 @@ def non_max_suppression_fast(boxes, overlapThresh):
         print("Exception occurred in non_max_suppression : {}".format(e))
 
 
-def main():
+def main(path_to_VID,path_to_new_VID):
     vc = cv2.VideoCapture()
-    if not vc.open('ML/SD/testvideo2.mp4'):
+    if not vc.open(path_to_VID):
         print('failed to open video capture')
         return
 
@@ -71,7 +71,7 @@ def main():
         int(vc.get(cv2.CAP_PROP_FRAME_HEIGHT)),
     )
     vw = cv2.VideoWriter()
-    if not vw.open('ML/SD/final.mp4', fourcc, fps, size):
+    if not vw.open(path_to_new_VID, fourcc, fps, size):
         print('failed to open video writer')
         return
 
@@ -79,8 +79,11 @@ def main():
     fps = 0
     total_frames = 0
 
+    FaultFrames = []
+
     while True:
         ok, frame = vc.read()
+
         if not ok:
             break
         total_frames = total_frames + 1
@@ -94,7 +97,7 @@ def main():
         rects = []
         for i in np.arange(0, person_detections.shape[2]):
             confidence = person_detections[0, 0, i, 2]
-            if confidence > 0.5:
+            if confidence > 0.7:
                 idx = int(person_detections[0, 0, i, 1])
 
                 if CLASSES[idx] != "person":
@@ -125,20 +128,22 @@ def main():
         for (id1, p1), (id2, p2) in combinations(centroid_dict.items(), 2):
             dx, dy = p1[0] - p2[0], p1[1] - p2[1]
             distance = math.sqrt(dx * dx + dy * dy)
-            if distance < 75.0:
+            if distance < 140.0:
                 if id1 not in red_zone_list:
                     red_zone_list.append(id1)
                 if id2 not in red_zone_list:
                     red_zone_list.append(id2)
+                    
+        
+        if len(red_zone_list) != 0:
+            FaultFrames.append(int(vc.get(cv2.CAP_PROP_POS_FRAMES)))
 
         for id, box in centroid_dict.items():
             if id in red_zone_list:
                 cv2.rectangle(frame, (box[2], box[3]), (box[4], box[5]), (0, 0, 255), 2)
-                print("distance not maintained")
                 
             else:
                 cv2.rectangle(frame, (box[2], box[3]), (box[4], box[5]), (0, 255, 0), 2)
-                print("distance maintained")
                 
 
 
@@ -163,4 +168,16 @@ def main():
     vw.release()        
     cv2.destroyAllWindows()
 
-main()
+    RemFaltyFrames = -1
+
+    
+    if FaultFrames != 0:
+        RemFaltyFrames = [FaultFrames[0]]
+        for i in range(len(FaultFrames) - 1):
+            if(FaultFrames[i] + 1 != FaultFrames[i + 1]):
+                RemFaltyFrames.append(FaultFrames[i+1])
+
+    return RemFaltyFrames
+
+x = main("ML/SD/testvideo2.mp4","ML/SD/final.mp4")
+print(x)
