@@ -128,7 +128,7 @@ def main(path_to_VID,path_to_new_VID):
         for (id1, p1), (id2, p2) in combinations(centroid_dict.items(), 2):
             dx, dy = p1[0] - p2[0], p1[1] - p2[1]
             distance = math.sqrt(dx * dx + dy * dy)
-            if distance < 130.0:
+            if distance < 140.0:
                 if id1 not in red_zone_list:
                     red_zone_list.append(id1)
                 if id2 not in red_zone_list:
@@ -141,11 +141,9 @@ def main(path_to_VID,path_to_new_VID):
         for id, box in centroid_dict.items():
             if id in red_zone_list:
                 cv2.rectangle(frame, (box[2], box[3]), (box[4], box[5]), (0, 0, 255), 2)
-                print("distance not maintained")
                 
             else:
                 cv2.rectangle(frame, (box[2], box[3]), (box[4], box[5]), (0, 255, 0), 2)
-                print("distance maintained")
                 
 
 
