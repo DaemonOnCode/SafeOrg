@@ -6,8 +6,8 @@ from centroidtracker import CentroidTracker
 from itertools import combinations
 import math
 
-protopath = "SD/MobileNetSSD_deploy.prototxt"
-modelpath = "SD/MobileNetSSD_deploy.caffemodel"
+protopath = "ML/SD/MobileNetSSD_deploy.prototxt"
+modelpath = "ML/SD/MobileNetSSD_deploy.caffemodel"
 detector = cv2.dnn.readNetFromCaffe(prototxt=protopath, caffeModel=modelpath)
 
 CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
@@ -60,7 +60,7 @@ def non_max_suppression_fast(boxes, overlapThresh):
 
 def main():
     vc = cv2.VideoCapture()
-    if not vc.open('SD/testvideo2.mp4'):
+    if not vc.open('ML/SD/testvideo2.mp4'):
         print('failed to open video capture')
         return
 
@@ -71,7 +71,7 @@ def main():
         int(vc.get(cv2.CAP_PROP_FRAME_HEIGHT)),
     )
     vw = cv2.VideoWriter()
-    if not vw.open('SD/final.mp4', fourcc, fps, size):
+    if not vw.open('ML/SD/final.mp4', fourcc, fps, size):
         print('failed to open video writer')
         return
 
@@ -134,8 +134,12 @@ def main():
         for id, box in centroid_dict.items():
             if id in red_zone_list:
                 cv2.rectangle(frame, (box[2], box[3]), (box[4], box[5]), (0, 0, 255), 2)
+                print("distance not maintained")
+                
             else:
                 cv2.rectangle(frame, (box[2], box[3]), (box[4], box[5]), (0, 255, 0), 2)
+                print("distance maintained")
+                
 
 
         fps_end_time = datetime.datetime.now()
