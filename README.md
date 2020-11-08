@@ -8,7 +8,7 @@
 
 ### Why is it Important?
 
-> Due to covid-19, the entire world has come to a halt. With over 49.8M cases worldwide and 1.25M deaths. Quarintine seems to be the only real solution. This dip in economic activity resulted in people losing their jobs. In many places, schools and offices have been completely shut-down to prevent covid form spreading.
+> Due to covid-19, the entire world has come to a halt. With over 49.8M cases worldwide and 1.25M deaths. Quarantine seems to be the only real solution. This dip in economic activity resulted in people losing their jobs. In many places, schools and offices have been completely shut-down to prevent covid form spreading.
 
 ### What the Statistics say
 
