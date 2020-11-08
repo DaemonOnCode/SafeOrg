@@ -18,7 +18,7 @@
 
 **Our Hack of the Hour presents to you a product which is meant to strengthen the relationship between a Therapist & its Client. A product that is meant to channel the Client's emotions and feelings anytime. Providing a detailed analysis, tailored to the Client itself.**
 
-**Our Hack of the Hour presents to you a product which can be used by any organization to prevent the formation of hotspots. It uses existing cameras and servers in the organization and provides a easy way to monitor how well covid prevention guidlines are being followed. Thus helping in reducing the risk of covid and increasing productivity.**  
+**Our Hack of the Hour presents to you a product which can be used by any organization to prevent the formation of hotspots. It uses existing cameras and servers in the organization and provides a easy way to monitor how well covid prevention guidelines are being followed. Thus helping in reducing the risk of covid and increasing productivity.**  
 
 ## Features offered by Fren
 
