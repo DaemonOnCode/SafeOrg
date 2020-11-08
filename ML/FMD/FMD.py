@@ -54,7 +54,7 @@ faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 maskNet = load_model("ML/FMD/mask_detector.model")
 
 
-def main(Path,path_to_new_VID):
+def main(Path, path_to_new_VID):
     FaultFrames = []
     cap = cv2.VideoCapture(Path)
 
@@ -97,7 +97,7 @@ def main(Path,path_to_new_VID):
                         cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
             cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 
-        #cv2.imshow("Frame", frame)
+        # cv2.imshow("Frame", frame)
         vw.write(frame)
         key = cv2.waitKey(1) & 0xFF
 
@@ -105,18 +105,14 @@ def main(Path,path_to_new_VID):
             break
 
     RemFaltyFrames = -1
-
-x = main("ML/FMD/DontUse.mp4","ML/FMD/DontUseProcessed.mp4")
-print(x)
-
     if FaultFrames != 0:
         RemFaltyFrames = [FaultFrames[0]]
         for i in range(len(FaultFrames) - 1):
             if(FaultFrames[i] + 1 != FaultFrames[i + 1]):
                 RemFaltyFrames.append(FaultFrames[i+1])
 
-    
-    vw.release()   
+
+    vw.release()
 
     cv2.destroyAllWindows()
     return RemFaltyFrames
