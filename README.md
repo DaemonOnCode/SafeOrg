@@ -1,7 +1,7 @@
 # SafeOrg
 
 
-## One-stop solution to restart the nation
+## One-stop solution to restart the nation!
 
 ## A Preview of What SafeOrg Is:
 ![Image]
@@ -46,12 +46,10 @@
   - keras
   - VideoStream
   - tensorflow
-  - 
+  - centroid-tracker
 - **APIs**
   - Node.js
   - Express in TypeScript
-  - MongoDB
-  - Flask
 - **Front-end**
   - React.js in TypeScript-XML
   - Tailwind CSS
