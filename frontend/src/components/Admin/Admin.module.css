@@ -29,13 +29,22 @@
 .reportCon{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-right: 4rem;
+    justify-content: space-evenly;
+    
 }
-.chartMain{
+.chartCon{
     display: flex;
     flex-direction: row;
-    margin-right: 2rem;
-    
-    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.miscCon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 6rem;
+    height: 100%;
 }

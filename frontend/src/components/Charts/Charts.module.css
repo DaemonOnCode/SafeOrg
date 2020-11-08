@@ -1,9 +1,8 @@
-.chatCon{
-    height: 20rem;
-    width: 32rem;
+.chartCon{
+    height: 25rem;
+    width: 40rem;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1.7px;
     border-color: black;
-    margin-top: 6rem;
-    margin-left: 10rem;
+    
 }
