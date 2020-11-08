@@ -18,16 +18,16 @@
 
 **Our Hack of the Hour presents to you a product which can be used by any organization to prevent the formation of hotspots. It uses existing cameras and servers in the organization and provides a easy way to monitor how well covid prevention guidelines are being followed. Thus helping in reducing the risk of covid and increasing productivity.**  
 
-## Features offered by Fren
+## Features offered by SafeOrg
 
 - ### **Face Mask Detection**
   - How many people are wearing face masks
 - ### **Social Distancing**
-  - How well the social distancing guidlines are maintained 
+  - How well the social distancing guidelines are maintained 
 - ### **Visualization**
-  - Beautiful graphs displaying statistics on how many guidlines are being broken that help in analysing trends 
+  - Beautiful graphs displaying statistics on how the guidelines are being broken down that help in analysing trends 
 - ### **Free Places**
-  - Places Through out the organization that are sparsly populated meaning are at low risk of covid
+  - Displaying places throughout the organization that are sparsely populated meaning are at low risk of covid
 
 ## A Look Into How SafeOrg Works
 
@@ -35,18 +35,18 @@
 
 ## WHAT IT DOES
 
-1. **Capture** - The Client writes it's thoughts, feelings, and emotions down in our product.
-2. **Calculate** - We take them and perform some magic on it, providing some numbers and comparisons.
-3. **Conclude** - The bunny out of the bag is shown to the Therapist, custom to each client to support the process in its entirety.
+1. **Capture** - Video data is picked from the organization’s server.  
+2. **Calculate** - Processed by multiple machine learning algorithms.
+3. **Conclude** - Identifies the people that could be affected by Covid upon contact with others and prevents the spread of Covid.
 
 ## Technology Stack and Dependencies
 
 - **ML**
-  - sklearn
-  - nltk
-  - spacy
-  - textblob
-  - pytorch
+  - opencv
+  - keras
+  - VideoStream
+  - tensorflow
+  - 
 - **APIs**
   - Node.js
   - Express in TypeScript
