@@ -54,19 +54,29 @@ faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 maskNet = load_model("ML/FMD/mask_detector.model")
 
 
-def main(Path):
+def main(Path,path_to_new_VID):
     FaultFrames = []
     cap = cv2.VideoCapture(Path)
+
+    vw = cv2.VideoWriter()
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    size = (
+        int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),
+        int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)),
+    )
+    if not vw.open(path_to_new_VID, fourcc, fps, size):
+        print('failed to open video writer')
+        return
 
     while(cap.isOpened()):
         ret, frame = cap.read()
 
-
         if not ret:
             break
 
-        if int(cap.get(cv2.CAP_PROP_POS_FRAMES)) < 450:
-            continue
+        # if int(cap.get(cv2.CAP_PROP_POS_FRAMES)) < 450:
+        #     continue
 
         (locs, preds) = detect_and_predict_mask(frame, faceNet, maskNet)
 
@@ -87,7 +97,8 @@ def main(Path):
                         cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
             cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 
-        cv2.imshow("Frame", frame)
+        #cv2.imshow("Frame", frame)
+        vw.write(frame)
         key = cv2.waitKey(1) & 0xFF
 
         if key == ord("q"):
@@ -95,15 +106,21 @@ def main(Path):
 
     RemFaltyFrames = -1
 
+x = main("ML/FMD/DontUse.mp4","ML/FMD/DontUseProcessed.mp4")
+print(x)
+
     if FaultFrames != 0:
         RemFaltyFrames = [FaultFrames[0]]
         for i in range(len(FaultFrames) - 1):
             if(FaultFrames[i] + 1 != FaultFrames[i + 1]):
                 RemFaltyFrames.append(FaultFrames[i+1])
 
+    
+    vw.release()   
+
     cv2.destroyAllWindows()
     return RemFaltyFrames
 
 
-x = main("ML/FMD/DontUse.mp4")
-print(x)
+# x = main("ML/FMD/DontUse.mp4","ML/FMD/DontUseProcessed.mp4")
+# print(x)

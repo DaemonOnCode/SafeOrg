@@ -2,7 +2,7 @@ import cv2
 import datetime
 import imutils
 import numpy as np
-from centroidtracker import CentroidTracker
+from SD.centroidtracker import CentroidTracker
 from itertools import combinations
 import math
 
@@ -84,8 +84,14 @@ def main(path_to_VID,path_to_new_VID):
     while True:
         ok, frame = vc.read()
 
+        Frame_no = int(vc.get(cv2.CAP_PROP_POS_FRAMES))
+
+        if Frame_no % 10 == 0: 
+            print(Frame_no)
+
         if not ok:
             break
+
         total_frames = total_frames + 1
 
         (H, W) = frame.shape[:2]
@@ -134,9 +140,8 @@ def main(path_to_VID,path_to_new_VID):
                 if id2 not in red_zone_list:
                     red_zone_list.append(id2)
                     
-        
         if len(red_zone_list) != 0:
-            FaultFrames.append(int(vc.get(cv2.CAP_PROP_POS_FRAMES)))
+            FaultFrames.append(Frame_no)
 
         for id, box in centroid_dict.items():
             if id in red_zone_list:
@@ -156,11 +161,11 @@ def main(path_to_VID,path_to_new_VID):
 
         fps_text = "FPS: {:.2f}".format(fps)
 
-        cv2.putText(frame, fps_text, (5, 30), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 1)
+        #cv2.putText(frame, fps_text, (5, 30), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 1)
 
         vw.write(frame)
 
-        cv2.imshow("Application", frame)
+        #cv2.imshow("Application", frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -179,5 +184,5 @@ def main(path_to_VID,path_to_new_VID):
 
     return RemFaltyFrames
 
-x = main("ML/SD/testvideo2.mp4","ML/SD/final.mp4")
-print(x)
+# x = main("ML/SD/testvideo2.mp4","ML/SD/final.mp4")
+# print(x)
