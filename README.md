@@ -14,7 +14,7 @@
 
 >In the first week of november schools Reopened in Andhra Pradesh, 500+ students & 800+ teachers tested positive for COVID-19 just in 3 days According to zee-news. As per The Economic Times, 17.7 million jobs were lost just in the month of April. By now over 50 million jobs have been lost, and thus we made a product to solve this problem.
 
-## Let us help,
+## Let us help
 
 **Our Hack of the Hour presents to you a product which is meant to strengthen the relationship between a Therapist & its Client. A product that is meant to channel the Client's emotions and feelings anytime. Providing a detailed analysis, tailored to the Client itself.**
 
