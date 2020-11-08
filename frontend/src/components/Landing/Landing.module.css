@@ -6,7 +6,7 @@
     flex-direction:  column;
 }
 .introCon{
-    height: 35rem;
+    height: 40rem;
     width: 100%;
     color: white;
     top: 0;
@@ -48,7 +48,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 4rem;
+    
+    height: 25rem;
+    margin-top: 6rem;
 }
 .analysisText{
     max-width: 35rem;
@@ -69,6 +71,29 @@
 }
 .mobileSize{
 
+}
+.socialImg{
+    margin-left: 6rem;
+    max-height: 30rem;
+}
+.feat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    height: 100%;
+}
+.socialText{
+    max-width: 35rem;
+    /* padding-top: 7rem; */
+    align-self: center;
+}
+.maskCon{
+   height: 28rem;
+}
+.maskText{
+    padding-right: 4rem;
 }
 
 @media only screen and (max-width: 600px) {

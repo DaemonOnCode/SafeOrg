@@ -54,3 +54,13 @@ code {
   align-items: center;
   justify-content: center;
 }
+
+.danger{
+  color: #ff4444 !important;
+}
+.safe{
+  color: green !important;
+}
+.heavy{
+  font-weight: 600;
+}
