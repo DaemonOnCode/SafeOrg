@@ -21,13 +21,11 @@
 ## Features offered by SafeOrg
 
 - ### **Face Mask Detection**
-  - How many people are wearing face masks
+  - How many people are wearing face masks.
 - ### **Social Distancing**
-  - How well the social distancing guidelines are maintained 
+  - How well the social distancing guidelines are maintained. 
 - ### **Visualization**
-  - Beautiful graphs displaying statistics on how the guidelines are being broken down that help in analysing trends 
-- ### **Free Places**
-  - Displaying places throughout the organization that are sparsely populated meaning are at low risk of covid
+  - Beautiful graphs displaying statistics and reports on how the guidelines are being broken down that help in analysing trends.
 
 ## A Look Into How SafeOrg Works
 
@@ -49,12 +47,16 @@
   - centroid-tracker
 - **APIs**
   - Node.js
-  - Express in TypeScript
+  - Express
 - **Front-end**
-  - React.js in TypeScript-XML
-  - Tailwind CSS
+  - React.js 
 
 ## Future Developments
+- ### **Free Places**
+  - Displaying places throughout the organization that are sparsely populated meaning are at low risk of Covid.
+- ### **Open API Service by Aarogya Setu **
+  - To integrate the open API service by Aarogya Setu. Since this API needs a minimum of 50 people to sign up so as to understand the vulnerability of each user towards Covid. 
+
 
 
 # Thank You!
