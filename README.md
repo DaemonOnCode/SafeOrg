@@ -4,7 +4,7 @@
 ## One-stop solution to restart the nation!
 
 ## A Preview of What SafeOrg Is:
-![Image]
+![Logo](./images/Logo.jpeg)
 
 ### Why is it Important?
 
@@ -29,7 +29,12 @@
 
 ## A Look Into How SafeOrg Works
 
-![Flow Chart](./assets/flow-chart.png)
+![Flow Chart](./images/flowchart.png)
+![Login Portal](./images/2.jpeg)
+![Login Portal Continue](./images/1.jpeg)
+![Admin Portal](./images/3.jpeg)
+![Face Mask Detection](./images/4.jpeg)
+![Social Distancing](./images/5.jpeg)
 
 ## WHAT IT DOES
 
@@ -54,7 +59,7 @@
 ## Future Developments
 - ### **Free Places**
   - Displaying places throughout the organization that are sparsely populated meaning are at low risk of Covid.
-- ### **Open API Service by Aarogya Setu **
+- ### **Open API Service by Aarogya Setu**
   - To integrate the open API service by Aarogya Setu. Since this API needs a minimum of 50 people to sign up so as to understand the vulnerability of each user towards Covid. 
 
 
@@ -72,7 +77,7 @@
 <p align="center">
 <a href = "https://github.com/saxenabhishek"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
 <a href = "https://www.linkedin.com/in/abhibored">
-<img src = "http://www.iconninja.com/files/8Talking about the user interface, we have a landing page which briefly talks about our product, explains the features that we are using to make this happen, some of them are- face mask detection & social distancing, it also gives a ground map of all the sparsely populated social places in that organization that are available at that exact instant for users to access safely. Upon login, we have an admin portal that gives a detailed report containing the number of people violating the covid regulations daily and weekly with their video, location, and time stamp upon processing all the videos on the server. It even gives beautiful visualizations using react charts for the same.63/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
+<img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
 </a>
 </p>
 </td>
@@ -84,6 +89,18 @@
 <p align="center">
 <a href = "https://github.com/DaemonOnCode"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
 <a href = "https://www.linkedin.com/in/anshsharma09">
+<img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
+</a>
+</p>
+</td>
+<td>
+<strong>Ria Tyagi</strong>
+<p align="center">
+<img src = "https://avatars3.githubusercontent.com/u/67195436?s=400&u=88da6770668f13b6010a6cb46ca5b56a0017f43c&v=4"  height="120" alt="Ria Tyagi">
+</p>
+<p align="center">
+<a href = "https://github.com/riasenpai"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
+<a href = "https://www.linkedin.com/in/riatyagi/">
 <img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
 </a>
 </p>
