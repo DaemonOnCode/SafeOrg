@@ -4,7 +4,7 @@
 ## One-stop solution to restart the nation!
 
 ## A Preview of What SafeOrg Is:
-![Logo](./images/Logo.jpeg)
+![Logo](Images/Logo.jpeg)
 
 ### Why is it Important?
 
@@ -29,12 +29,17 @@
 
 ## A Look Into How SafeOrg Works
 
-![Flow Chart](./images/flowchart.png)
-![Login Portal](./images/2.jpeg)
-![Login Portal Continue](./images/1.jpeg)
-![Admin Portal](./images/3.jpeg)
-![Face Mask Detection](./images/4.jpeg)
-![Social Distancing](./images/5.jpeg)
+![Flow Chart](Images/flowchart.png)
+
+![Login Portal](Images/2.jpeg)
+
+![Login Portal Continue](Images/1.jpeg)
+
+![Admin Portal](Images/3.jpeg)
+
+![Face Mask Detection](Images/4.jpeg)
+
+![Social Distancing](Images/5.jpeg)
 
 ## WHAT IT DOES
 
