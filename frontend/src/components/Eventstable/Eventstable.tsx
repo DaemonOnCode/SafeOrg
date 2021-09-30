@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Eventstable.module.css';
 
-class Eventstable extends React.Component{
+class Eventstable extends Component{
     constructor(props) {
         super(props);
         console.log(this.props)
